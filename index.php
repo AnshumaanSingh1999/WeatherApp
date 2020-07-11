@@ -1,6 +1,6 @@
 <?php
 
-    $link = mysqli_connect("localhost", "root", "", "test");
+    $link = mysqli_connect("localhost", "root", "*******", "test");
 
     if (mysqli_connect_error()) {
         
@@ -26,7 +26,7 @@ $country=$_GET['country'];
     
     if ($_GET['city']) {
         
-     $urlContents = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".urlencode($_GET['city']).",".urlencode($nc)."&appid=4b6cbadba309b7554491c5dc66401886");
+     $urlContents = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".urlencode($_GET['city']).",".urlencode($nc)."&appid=4b6cbadba309b755449************");
         
         $weatherArray = json_decode($urlContents, true);
         
